@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>个人博客</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<style>
+*{margin: 0;text-decoration: none;list-style: none;}
+    #me{position: absolute;bottom: -700px;}
+
+#ganhuo{position: fixed;left: 0px;top: 320px;width:30px;border-radius: 5px;background: url(images/ghbg.png);border-left: none;}
+#ganhuodiv{position: fixed;width: 300px;height: 400px;top: 175px;left: -350px;background:url(images/ghbg2.png);border: 1px solid black;border-radius: 5px;overflow: hidden;}
+
+    h2{margin-top: 100px;font-size: 2em}
+    p{margin: 20px;margin-left: 100px;margin-right: 100px;font-weight: bold;}
+
+    header{width: 100%;height: 100px;background: url(images/0.png);background-repeat:repeat-x;box-shadow: 1px 5px 25px #333333}
+
+    #sectionIn{position:absolute;top: 80px; width: 100%;height: 620px;background: url(images/bg.jpg);z-index:-1}
+
+ 
+
+    #hd{width: 960px;height: 80px;margin: 0 auto;position: relative;}
+
+    #zzj{width:100px;position: absolute; top: 20px;left: 50px;}
+
+    #qdkf{width: 200px;position: absolute;top: 60px;}
+
+    #sec{position: relative;margin: 0 auto ;width: 960px;height: 570px;background:rgba(143,143,143,0);}
+
+    #inputdiv{position: absolute;left: 215px;top: 125px;}
+    .input{display: block;margin: 0px 0;padding: 3px;text-align: right;border-radius: 10px;line-height: 30px;letter-spacing: 1px;border:2px solid rgba(0,0,0,0.5);font-size: 1.5em; font-family:"Microsoft YaHei";overflow: hidden;}
+    .input>a{color:#ffeded}
+        #div1{display: none;width: 0px;height:30px;background:#018caa}
+        #div2{display: none;width: 0px;height:30px;background:#9a224f}
+        #div3{display: none;width: 0px;height:30px;background:#018caa}
+        #div4{display: none;width: 0px;height:30px;background:#9a224f}
+        #div5{display: none;width: 0px;height:30px;background:#018caa}
+            #div1:hover{background:#0d1dec;}
+            #div2:hover{background:#f50e45;}
+            #div3:hover{background:#0d1dec;}
+            #div4:hover{background:#f50e45;}
+            #div5:hover{background:#0d1dec;}
+
+    .divshow{
+        position: absolute;width: 500px;height: 550px; 
+        background:url(images/XLBG.png);right: 10px;
+        top:-710px; //-710
+        border-radius: 20px;border:6px ridge rgba(126,64,0,1);box-shadow: 2px 2px 5px black;text-align: center;
+    }
+        #show1div{
+                    margin: 0 auto;width: 450px;margin-top: 70px;
+                    }
+        .show2div{width: 220px;height: 160px;background:rgba(255,255,255,0.5);float: left;margin: 10px 15px;border-radius: 10px;box-shadow: -2px 5px 20px #333333;overflow: hidden;}
+     
+
+
+
+    
+.box,.boxin{background:rgba(61,146,126,0.8);width: 150px;height: 150px;overflow: hidden;margin: 30px;border-radius: 30px;border:2px solid black;display: inline-block;box-shadow: 2px 1px 5px black;
+}
+        .boxin{background:rgba(143,143,143,0);}
+        .boxall{position: absolute;top: 70px;}
+#boximg1,#boximg2,#boximg3,#boximg4{display: none;}
+#box3>div{margin-top: 60px;color: black}
+#box4>div{margin-top: 60px;color: black}
+
+.jndiv,.jndiv1,#jndiv2{display: inline-block;border: 1px solid black;overflow: hidden;float: left;border-radius: 5px;}
+.jndiv{height: 240px;}
+.jndiv1{width: 164px;border-radius: 32px;height: 164px;}
+#jndiv2{width: 495px;height: 141px;border-radius: 32px;}
+#show4{background:black}
+
+
+
+.wait{width: 100%;height: 100%;background: rgba(255,255,255,0);color: rgba(0,0,0,0);text-align: center;line-height: 120px;
+        transition-property:all;
+        transition-duration: 2s;
+    }
+.wait:hover{background: rgba(0,0,0,1);color: rgba(255,255,255,1);}
+
+
+
+
+footer{position:absolute;top:640px;width: 100%;height: 70px;background: url(images/0.png);background-repeat:repeat-x;box-shadow: 1px -5px 25px #333333}
+
+iframe{width: 100%;height: 60px;}
+
+
+
+
+
+</style>
+<body>
+    <section>
+        <div id="ganhuodiv"></div>
+        <button id="ganhuo">点我有干货</button>
+
+
+
+        <header>
+                <div id="hd">
+                    <div><img src="images/zzj3.png" alt="" id="zzj">
+                         <img src="images/qdkf2.png" alt="" id="qdkf">
+                    </div>
+                </div>
+        </header>
+
+
+
+
+
+
+
+        <section id='sectionIn'>
+
+
+
+
+            <div id="sec">
+                <div id='inputdiv'>
+                    <div class="input" id="div1"><a href="#" id="a1">联系方式</a></div><br>
+                    <div class="input" id="div2"><a href="#" id="a2">作品</a></div><br>
+                    <div class="input" id="div3"><a href="#" id="a3">工作经历</a></div><br>
+                    <div class="input" id="div4"><a href="#" id="a4">技能</a></div><br>
+                    <div class="input" id="div5"><a href="#" id="a5">关于我</a></div><br>
+                </div>
+
+
+
+
+
+        <div id="show1" class="divshow">
+            <div id="show1div">
+            <div class="box"><img src="images/QQ2.png" alt="" style='width:145px;'></div>
+            <div class="box"><img src="images/wechat.png" alt="" style="width:150px;"></div>
+            <div class="box"><img src="images/email.jpg" alt="" style="width:150px;"></div>
+            <div class="box"><img src="images/phone.jpg" alt="" style="width:150px;"></div>
+            </div>
+            <div class="boxall">
+            <a href="#"><div class="boxin" id="box1"><img src="images/QQEWM.png" alt="" style="width:150px;" id="boximg1"></div></a>
+            <a href="#"><div class="boxin" id="box2"><img src="images/WCEWM.png" alt="" style="width:150px;" id="boximg2"></div></a>
+            <a href="Mailto:953748496@qq.com"><div class="boxin" id="box3"><div id="boximg3">953748496@qq.com<br>点击给我发邮件</div></div></a>
+            <a href="#"><div class="boxin" id="box4"><div id="boximg4">134-2067-5733<br>联系我</div></div></a>
+            </div>
+        </div>
+
+
+
+            <div id="show2" class="divshow">
+               <div class="show2div"> <a href="demo/163/163.html" id="awy" target="main"><img src="images/wyi.png" alt="" style="width:240px;height:180"></a></div>
+                <div class="show2div"> <a href="demo/design/design.html" id="ads" target="main"><img src="images/design.jpg" alt="" style="width:320px;"></a></div>
+                <div class="show2div"> <a href="demo/163/163.html" id="awy"><img src="images/wyi.png" alt="" style="width:240px;height:180"></a></div>
+                <div class="show2div"><div class="wait">敬请期待</div></div>
+                <div class="show2div"><div class="wait">敬请期待</div></div>
+                <div class="show2div"><div class="wait">敬请期待</div></div>
+            </div>
+
+
+
+
+
+            <div id="show3" class="divshow"></div>
+            
+            <div id="show4" class="divshow">
+            <div class="jndiv"><img src="images/PS.png" style="width:248px;height:248px;" alt=""></div>
+            <div class="jndiv"><img src="images/AE.png" style="width:248px;height:248px;" alt=""></div>
+            <div class="jndiv1"><img src="images/HTML.png" style="width:166px;" alt=""></div>
+            <div class="jndiv1"><img src="images/CSS.png" style="width:166px;" alt=""></div>
+            <div class="jndiv1"><img src="images/JS.png" style="width:166px;" alt=""></div>
+            <div id="jndiv2"><img src="images/JQUERY.png" style="width:500px;height:143px;" alt=""></div>
+
+
+            </div>
+
+
+
+
+
+            <div id="show0" class="divshow"><h2>邹志军，前端工程师</h2>
+                <p>&nbsp&nbsp 我喜欢旅游，也是一名非著名摄影师。从事web前端开发。目前主要基于HTML5、CSS、Javascript、jQuery、Ajax、JSON等技术开发。这个网站是我的个人主页，个人资料以及个人简历。我不断地在学习。如果您想深入了解我，请点击联系方式，联系我。</p>
+                <p>&nbsp&nbsp 2016.06毕业于广东海洋大学信息学院电子系电子信息工程专业，获得工学学士学位。</p>
+                <p>&nbsp&nbsp 曾在大学期间担任班级班长，青年志愿者协会服务队队长，为人天真乐观，有很强的进取心，很强的学习能力，团队协作能力好，有创新意识。</p></div>
+
+
+
+                <img src="images/me.png" alt="" id="me" style="width:300px;">
+            </div>
+        </section>
+
+
+
+
+        <footer><iframe src="" frameborder="0" name="main" id="if"></iframe></footer>
+    </section>
+    <script>
+        $(document).ready(function(){ 
+                    $('#me').animate({bottom:-10},800,function(){
+                    $('#div1').fadeIn(3).animate({width:140},300);
+                    $('#div2').fadeIn(5).animate({width:110},1000,function(){
+                        $('#show0').animate({top:10},350).animate({top:-30},400).animate({top:-10},400)});
+                    $('#div3').fadeIn(4).animate({width:160},700);
+                    $('#div4').fadeIn(6).animate({width:120},900);
+                    $('#div5').fadeIn(5).animate({width:110},500);
+
+                    
+                            })
+
+            $('#a1').click(function(){
+                    $('.divshow').animate({top:-710},500)            
+                    $('#show1').animate({top:10},350).animate({top:-30},400).animate({top:-10},400)
+                        })
+            $('#a2').click(function(){
+                    $('.divshow').animate({top:-710},500) 
+                    $('#show2').animate({top:10},350).animate({top:-30},400).animate({top:-10},400)
+                        })
+            $('#a3').click(function(){
+                    $('.divshow').animate({top:-710},500) 
+                    $('#show3').animate({top:10},350).animate({top:-30},400).animate({top:-10},400)
+                        })
+            $('#a4').click(function(){
+                    $('.divshow').animate({top:-710},500) 
+                    $('#show4').animate({top:10},350).animate({top:-30},400).animate({top:-10},400)
+                        })
+            $('#a5').click(function(){
+                    $('.divshow').animate({top:-710},500) 
+                    $('#show0').animate({top:10},350).animate({top:-30},400).animate({top:-10},400)
+                        })
+                    
+
+            $('.boxin').mouseenter(function(event){
+                $(event.target).css('background','rgba(143,143,143,0.8)')
+            })
+            $('.boxin').mouseleave(function(event){
+                $(event.target).css('background','rgba(143,143,143,0)')
+            })
+
+            $('#box1').click(function(){
+                $('#boximg1').fadeToggle(500)
+            })
+            $('#box2').click(function(){
+                $('#boximg2').fadeToggle(500)
+            })
+                $('#box3').mouseenter(function(){
+                    $('#boximg3').fadeIn(1)
+                })
+                $('#box3').mouseleave(function(){
+                    $('#boximg3').fadeOut(1)
+                })
+                $('#box4').mouseenter(function(){
+                    $('#boximg4').fadeIn(1)
+                })
+                $('#box4').mouseleave(function(){
+                    $('#boximg4').fadeOut(1)
+                })
+
+            var o=true;
+
+            $('#ganhuo').click(function(){
+
+                if (o) {
+                $('#ganhuodiv').animate({left:50},300).animate({left:-25},400).animate({left:0},500)
+                $('#ganhuo').animate({left:350},300).animate({left:275},400).animate({left:300},500)
+
+                o=false;
+                }else{
+                $('#ganhuodiv').animate({left:-350},300)    
+                $('#ganhuo').animate({left:0},300)
+                o=true;
+                };
+            })
+
+   
+            $('#awy').click(function(){
+                $('#if').animate({height:750},1000)
+            })
+
+            $('#ads').click(function(){
+                $('#if').animate({height:1750},1000)
+            })
+                   
+        
+
+
+
+
+
+        })
+
+    </script>
+</body>
+</html>
